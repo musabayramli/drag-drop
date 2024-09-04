@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kanban Board</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Uğur qazanmaq üçün hər kiçik addım böyük bir dəyişiklikdir</h1>
+    </header>
+    <div class="kanban-board">
+      <div class="column" id="todo">
+        <h2>Todo</h2>
+        <form id="add-task-form">
+          <input
+            type="text"
+            id="new-task"
+            placeholder="Yeni task əlavə et"
+            required
+          />
+          <button type="submit">Əlavə et</button>
+        </form>
+        <div class="task" draggable="true">Task 1</div>
+        <div class="task" draggable="true">Task 2</div>
+      </div>
+      <div class="column" id="in-progress">
+        <h2>In Progress (<span id="in-progress-count">0</span>)</h2>
+      </div>
+      <div class="column" id="done">
+        <h2>Done (<span id="done-count">0</span>)</h2>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
